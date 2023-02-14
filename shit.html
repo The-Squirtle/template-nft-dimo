@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+</head>
+<body>    
+    <input type="text" id="inputNumber">
+    <button id="checkBtn">Vérifier</button>
+    <div id="result"></div>
+    
+    <script>
+    const inputNumber = document.getElementById("inputNumber");
+    const checkBtn = document.getElementById("checkBtn");
+    const resultDiv = document.getElementById("result");
+    
+    function isPrime(num) {
+      if (num <= 1) return false;
+      for (let i = 2; i < num; i++) {
+        if (num % i === 0) return false;
+      }
+      return true;
+    }
+    
+    checkBtn.addEventListener("click", function() {
+      const num = Number(inputNumber.value);
+      const isNumPrime = isPrime(num);
+      resultDiv.innerHTML = `<p>Le nombre ${num} est ${
+        isNumPrime ? "premier" : "non-premier"
+      }.</p>`;
+    });
+    </script>
+    
+    
+
+
+    <button id="myButton">Affichage des nombres</button>
+    <div id="myDiv">
+    </div>
+    
+    <script>
+    document.getElementById("myButton").addEventListener("click", function(){
+      for (var i = 1; i <= 100; i++) {
+        var text = "";
+        if (i % 3 == 0) {
+          text = "Fizz";
+        }
+        if (i % 5 == 0) {
+          text += "Buzz";
+        }
+        if (text === "") {
+          text = i;
+        }
+        document.getElementById("myDiv").innerHTML += text + "<br>";
+      }
+    });
+    </script>
+    
+
+
+
+
+    
+<script>
+    function cliquer() {
+        console.log("J'ai cliqué sur le bouton!!")
+    }
+</script>
+
+<style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        div {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        p {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #3C3C3C;
+            color: white;
+            font-size: 2rem;
+            text-align: center;
+            text-transform: capitalize;
+            cursor: pointer;
+            transition: transform 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+
+    
+
+
+<script>
+ function changeColor(container) {
+     console.log(container)
+     container.style.backgroundColor = 'yellow';
+ }
+</script>
+
+
+<script>
+    function cliquer() {
+        console.log("J'ai double cliqué sur le bouton!!")
+    }
+    
+    document.getElementById("btn").addEventListener('dblclick', cliquer);
+</script>
+
+
+<style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        div {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        p {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #3C3C3C;
+            color: white;
+            font-size: 2rem;
+            text-align: center;
+            text-transform: capitalize;
+            cursor: pointer;
+            transition: transform 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <img id="image"
+         src="https://images.unsplash.com/photo-1548197253-652ffe79752c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=775&q=80"
+         alt="">
+    <p>révéler l’image qui se cache en dessous</p>
+</div>
+
+<script>
+    const p = document.querySelector('p')
+    p.addEventListener('dblclick', (e)=>{
+        e.target.style.transform = "translateX(400px)";
+    })
+</script>
+
+
+
+
+
+</body>
+</html>
